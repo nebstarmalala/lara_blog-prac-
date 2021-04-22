@@ -14,10 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/blogs', function () {
     $blogs = [
         ["title" => "Laravel for begginers", "author" => "Nebstar Malash"],
         ["title" => "PHP for intermediate", "author" => "Shem ian"],
