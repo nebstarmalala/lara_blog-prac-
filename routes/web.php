@@ -21,5 +21,17 @@ Route::get('/', function () {
         ["title" => "Ruby for hackers", "author" => "Agusto wafula"],
     ];
 
-    return view('welcome', ["blogs" => $blogs]);
+    $name = request('name');
+    $occupation = request('occupation');
+
+    return view('welcome', [
+        "blogs" => $blogs,
+        'name' => $name,
+        'occupation' => $occupation
+        ]);
+});
+
+Route::get('/{id}', function ($id) {
+
+    return view('details', ['id' => $id]);
 });
