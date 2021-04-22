@@ -21,5 +21,5 @@ Route::get('/', function () {
         ["title" => "Ruby for hackers", "author" => "Agusto wafula"],
     ];
 
-    return view('blogs', ["blogs" => $blogs]);
+    return view('welcome', ["blogs" => $blogs]);
 });
