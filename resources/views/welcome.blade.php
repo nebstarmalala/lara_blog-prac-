@@ -6,7 +6,7 @@
         <br>
         <img src="/img/blog_img.jpg" alt="Blog Logo" height="400">
         <div class="title m-b-md">
-           BLOGS
+           By {{ $name}} ({{ $occupation}})
         </div>
         <br>
         @foreach($blogs as $blog)
