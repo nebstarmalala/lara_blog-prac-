@@ -12,8 +12,11 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/blogs', function () {
     $blogs = [
         ["title" => "Laravel for begginers", "author" => "Nebstar Malash"],
         ["title" => "PHP for intermediate", "author" => "Shem ian"],
@@ -24,14 +27,14 @@ Route::get('/', function () {
     $name = request('name');
     $occupation = request('occupation');
 
-    return view('welcome', [
+    return view('blogs', [
         "blogs" => $blogs,
         'name' => $name,
         'occupation' => $occupation
         ]);
 });
 
-Route::get('/{id}', function ($id) {
+Route::get('/blogs/{id}', function ($id) {
 
     return view('details', ['id' => $id]);
 });
