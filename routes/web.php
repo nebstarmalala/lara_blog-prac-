@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BlogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,25 +17,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/blogs', function () {
-    $blogs = [
-        ["title" => "Laravel for begginers", "author" => "Nebstar Malash"],
-        ["title" => "PHP for intermediate", "author" => "Shem ian"],
-        ["title" => "Python for Professionals", "author" => "Martin Mato"],
-        ["title" => "Ruby for hackers", "author" => "Agusto wafula"],
-    ];
-
-    $name = request('name');
-    $occupation = request('occupation');
-
-    return view('blogs', [
-        "blogs" => $blogs,
-        'name' => $name,
-        'occupation' => $occupation
-        ]);
-});
-
-Route::get('/blogs/{id}', function ($id) {
-
-    return view('details', ['id' => $id]);
-});
+Route::get('/blogs', [BlogController::class, 'index']);
+Route::get('/blogs/{id}', [BlogController::class, 'show']);
