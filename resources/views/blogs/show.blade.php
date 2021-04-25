@@ -6,4 +6,5 @@
     <p>{{$blog->body }}</p>
     <p>By {{$blog->author}}</p>
 </div>
+<a href="/blogs" class="back">Back to Blogs</a>
 @endsection
