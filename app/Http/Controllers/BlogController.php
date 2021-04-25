@@ -3,16 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use app\Modeld\Blog;
 
 class BlogController extends Controller
 {
     public function index(){
-        $blogs = [
-            ["title" => "Laravel for begginers", "author" => "Nebstar Malash"],
-            ["title" => "PHP for intermediate", "author" => "Shem ian"],
-            ["title" => "Python for Professionals", "author" => "Martin Mato"],
-            ["title" => "Ruby for hackers", "author" => "Agusto wafula"],
-        ];
+        $blogs = Blog::all();
     
         $name = request('name');
         $occupation = request('occupation');
