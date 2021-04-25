@@ -13,7 +13,7 @@ class BlogController extends Controller
         $name = request('name');
         $occupation = request('occupation');
     
-        return view('blogs', [
+        return view('blogs.index', [
             "blogs" => $blogs,
             'name' => $name,
             'occupation' => $occupation
@@ -21,6 +21,6 @@ class BlogController extends Controller
     }
 
     public function show($id){
-        return view('details', ['id' => $id]);
+        return view('blogs.show', ['id' => $id]);
     }
 }
