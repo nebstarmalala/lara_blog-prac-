@@ -21,7 +21,8 @@ class BlogController extends Controller
     }
 
     public function show($id){
-        return view('blogs.show', ['id' => $id]);
+        $blog = Blog::find($id);
+        return view('blogs.show', ['blog' => $blog]);
     }
 
     public function create(){
