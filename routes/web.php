@@ -18,4 +18,5 @@ Route::get('/', function () {
 });
 
 Route::get('/blogs', [BlogController::class, 'index']);
+Route::get('/blogs/create', [BlogController::class, 'create']);
 Route::get('/blogs/{id}', [BlogController::class, 'show']);
