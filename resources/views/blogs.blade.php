@@ -10,7 +10,7 @@
         </div>
         <br>
         @foreach($blogs as $blog)
-            <p>{{ $blog['author']}} -> {{ $blog['title'] }}</p>
+            <p>{{ $blog->author }} -> {{ $blog->title }}</p>
         @endforeach
     </div>
 </div>
