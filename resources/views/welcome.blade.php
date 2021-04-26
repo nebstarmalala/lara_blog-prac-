@@ -8,7 +8,7 @@
             HOME PAGE
         </div>
         <br>
-        
+        <a href="/blogs/create">Create Blog</a>
     </div>
 </div>
 @endsection
