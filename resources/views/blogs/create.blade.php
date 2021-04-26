@@ -1,15 +1,18 @@
 @extends('layouts.layout')
 
 @section('content')
-<div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-    <div class="content">
-        <br>
-        <br>
-        <div class="content">
-            <div class="title m-b-md">
-                Add Blog
-            </div>
-        </div>
-    </div>
+<div class="wrapper create-blog">
+    <h1>Create a new blog</h1>
+    <form action="" method="post">
+        <div>
+            <label for="title">Title</label>
+            <input type="text" id="title" name="title">
+            <label for="body">Body</label>
+            <textarea name="body" id="body" cols="30" rows="10"></textarea>
+            <label for="author">Author</label>
+            <input type="text" id="author" name="author">
+            <input type="submit" value="Create Blog">
+    </form>
+    <br><br>
 </div>
 @endsection
