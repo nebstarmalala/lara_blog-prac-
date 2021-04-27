@@ -22,3 +22,7 @@ Route::get('/blogs/create', [BlogController::class, 'create']);
 Route::post('/blogs', [BlogController::class, 'store']);
 Route::delete('/blogs/{id}', [BlogController::class, 'destroy']);
 Route::get('/blogs/{id}', [BlogController::class, 'show']);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
