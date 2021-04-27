@@ -40,4 +40,11 @@ class BlogController extends Controller
 
         return redirect("/")->with('msg', 'Blog created successfully!');
     }
+
+    public function destroy($id){
+        $blog = Blog::findOrFail($id);
+        $blog->delete();
+
+        return redirect("/blogs");
+    }
 }
