@@ -3,7 +3,8 @@
 @section('content')
 <div class="wrapper create-blog">
     <h1>Create a new blog</h1>
-    <form action="" method="post">
+    <form action="/blogs" method="post">
+    @csrf
         <div>
             <label for="title">Title</label>
             <input type="text" id="title" name="title">

@@ -8,6 +8,8 @@
             HOME PAGE
         </div>
         <br>
+        <p class="msg">{{ session("msg") }}</p>
+        <br>
         <a href="/blogs/create">Create Blog</a>
     </div>
 </div>

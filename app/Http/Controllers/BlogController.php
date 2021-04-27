@@ -28,4 +28,16 @@ class BlogController extends Controller
     public function create(){
         return view('blogs.create');
     }
+
+    public function store(){
+        $blog = new Blog();
+
+        $blog->title = request("title");
+        $blog->body = request("body");
+        $blog->author = request("author");
+
+        $blog->save();
+
+        return redirect("/")->with('msg', 'Blog created successfully!');
+    }
 }
